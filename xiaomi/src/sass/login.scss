@@ -1,0 +1,308 @@
+@import 'public';
+
+#left {
+    width: 375px;
+    height: 818px;
+    float: left;
+
+    .bn {
+        width: 100%;
+
+    }
+}
+
+#right {
+    width: calc(100% - 375px);
+    height: 818px;
+    float: left;
+
+    // 头部
+    .header {
+        height: 80px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+
+        // 左边logo部分
+        .lt {
+            width: 155px;
+            height: 40px;
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 40px;
+
+            .img {
+                float: left;
+            }
+
+            .txt {
+                float: right;
+            }
+        }
+
+        // 右边导航部分
+        .rt {
+            width: 353px;
+            height: 40px;
+            float: right;
+
+            .ul1 {
+                width: 238px;
+                height: 40px;
+                float: left;
+
+                .imp {
+                    float: left;
+                    width: 56px;
+                    // line-height: 40px;
+                    text-align: center;
+                    font-size: 14px;
+                    padding: 0 10px;
+                    color: #838383;
+                    margin-top: 10px;
+                }
+
+                a {
+                    color: #838383
+                }
+
+                .imp1 {
+                    border-right: {
+                        style: solid;
+                        color: #838383;
+                        width: 1px;
+                    }
+                }
+            }
+
+            // 语言框
+            .rt_xl {
+                width: 84px;
+                height: 40px;
+                float: left;
+                font-size: 14px;
+                margin-top: 10px;
+                margin-left: 10px;
+
+                .ul2 {
+                    width: 84px;
+                    height: 80px;
+                    margin-top: 10px;
+                    display: none;
+
+                    .li1 {
+                        width: 84px;
+                        height: 40px;
+                        text-align: center;
+                        line-height: 40px;
+                    }
+                }
+
+            }
+
+            .rt_xl:hover .ul2 {
+                display: block;
+            }
+        }
+    }
+
+    // 外层盒子
+    .box {
+        width: 450px;
+        height: 520px;
+        background-color:#fff;
+      
+
+        margin: 0 auto;
+        padding: 45px 42.5px;
+        box-sizing: border-box;
+        background-image: url(../img/login_08.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+
+        // 里面盒子  核心区域
+        .inner {
+            width: 360px;
+            height: 435px;
+           
+            // border: 1px solid black;
+            // box-sizing: border-box;
+
+            // 第一部分
+            .top {
+                height: 41px;
+                font-size: 22px;
+                line-height: 41px;
+
+                .dl {
+                    width: 64px;
+                    height: 40px;
+                    float: left;
+
+
+                    a {
+                        color: black;
+
+                        border-bottom: {
+                            style: solid;
+                            color: red;
+                            width: 6px;
+                        }
+
+                        border-radius: 3px;
+                        padding: 2px;
+                    }
+
+                    ;
+                }
+
+                .zc {
+                    width: 64px;
+                    height: 40px;
+                    float: left;
+
+                    a {
+                        color: #bbb;
+                    }
+                }
+            }
+
+            // 中间部分
+            .center {
+                width: 360px;
+                height: 285px;
+                margin-top: 10px;
+                padding: 2px;
+                box-sizing: border-box;
+
+                // 输入框部分
+                .input {
+                    height: 60px;
+
+                    //下拉部分
+                    .select_box {
+                        height: 60px;
+                        background: #ccc;
+
+                        select {
+                            width: 140px;
+                            height: 60px;
+                            // line-height: 60px;
+                            padding: 0 20px;
+                            font-size: 17px;
+                            border: 0;
+                            background-color: #ccc;
+                        }
+
+                        // 输入电话部分
+                        span {
+                            height: 60px;
+                        }
+
+                        .txt {
+                            height: 40px;
+                            outline: none;
+                            border: 0;
+                        }
+                    }
+
+                }
+
+                // 验证
+                p {
+                    font-size: 12px;
+                    color: #999999;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+
+                // 同意协议
+                .lable {
+                    font-size: 14px;
+                    color: #AAAAAA;
+
+                    a {
+                        font-size: 14px;
+                        color: black;
+
+                    }
+                }
+
+                //下一步按钮
+                .btn {
+                    width: 360px;
+                    height: 60px;
+                    background-color: #ffbd98;
+                    margin: 20px 0 10px;
+                    border-radius: 20px;
+                    font-size: 18px;
+                    color: white;
+                    border: 0;
+                }
+
+                .forget {
+                    width: 360px;
+                    height: 37px;
+
+                    .fgt_id {
+                        width: 84px;
+                        float: left;
+                        font-size: 17px;
+
+                        a {
+                            color: #FF5C00;
+                        }
+                    }
+
+                    .psw_log {
+                        width: 84px;
+                        float: right;
+                        font-size: 17px;
+
+                        a {
+                            color: #FF5C00;
+                        }
+
+                    }
+                }
+
+                .other {
+                    text-align: center;
+                    height: 96px;                 
+                    font-size: 17px;
+                    color: #AAA;
+                    .other_text{
+                        height: 40px;
+                        line-height: 40px;
+                        margin-bottom: 10px;
+                    }
+                   .icon{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        margin-right: 25px;
+                    }
+                   }
+                }
+            }
+        }
+
+
+
+
+    }
+
+    //底部
+    .footer{
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #999;
+        margin-top: 130px;
+    }
+}
