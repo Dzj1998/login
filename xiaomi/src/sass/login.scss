@@ -36,7 +36,7 @@
                 float: left;
             }
 
-            .txt {
+            .txt_xiaomi {
                 float: right;
             }
         }
@@ -110,9 +110,9 @@
     // 外层盒子
     .box {
         width: 450px;
-        height: 520px;
-        background-color:#fff;
-      
+        // height: 520px;
+        background-color: #fff;
+
 
         margin: 0 auto;
         padding: 45px 42.5px;
@@ -121,55 +121,54 @@
         background-repeat: no-repeat;
         background-position: top right;
 
+        // 第一部分
+        .top {
+            height: 41px;
+            font-size: 22px;
+            line-height: 41px;
+
+            .dl {
+                width: 64px;
+                height: 40px;
+                float: left;
+
+
+               span {
+                    color: black;
+
+                    border-bottom: {
+                        style: solid;
+                        color: red;
+                        width: 6px;
+                    }
+
+                    border-radius: 3px;
+                    padding: 2px;
+                }
+
+                ;
+            }
+
+            .zc {
+                width: 64px;
+                height: 40px;
+                float: left;
+
+               span{
+                    color: #bbb;
+                }
+            }
+        }
+
         // 里面盒子  核心区域
         .inner {
             width: 360px;
-            height: 435px;
-           
-            // border: 1px solid black;
-            // box-sizing: border-box;
-
-            // 第一部分
-            .top {
-                height: 41px;
-                font-size: 22px;
-                line-height: 41px;
-
-                .dl {
-                    width: 64px;
-                    height: 40px;
-                    float: left;
+            // height: 435px;
 
 
-                    a {
-                        color: black;
-
-                        border-bottom: {
-                            style: solid;
-                            color: red;
-                            width: 6px;
-                        }
-
-                        border-radius: 3px;
-                        padding: 2px;
-                    }
-
-                    ;
-                }
-
-                .zc {
-                    width: 64px;
-                    height: 40px;
-                    float: left;
-
-                    a {
-                        color: #bbb;
-                    }
-                }
-            }
-
+            //登录部分
             // 中间部分
-            .center {
+            .dl_center {
                 width: 360px;
                 height: 285px;
                 margin-top: 10px;
@@ -179,11 +178,13 @@
                 // 输入框部分
                 .input {
                     height: 60px;
+                    border: 0px solid orange;
 
                     //下拉部分
                     .select_box {
                         height: 60px;
-                        background: #ccc;
+                        float: left;
+                        // background: #ccc;
 
                         select {
                             width: 140px;
@@ -192,20 +193,37 @@
                             padding: 0 20px;
                             font-size: 17px;
                             border: 0;
-                            background-color: #ccc;
+                            background-color: rgba(204, 204, 204, 0);
                         }
 
-                        // 输入电话部分
-                        span {
-                            height: 60px;
-                        }
+
+                    }
+
+                    // 输入电话部分
+                    .phone_box {
+                        height: 60px;
+                        float: left;
 
                         .txt {
-                            height: 40px;
-                            outline: none;
+                            width: 200px;
+                            height: 60px;
+                            line-height: 60px;
+                            font-size: 17px;
+                            color: #00000066;
+                          
+
+                        }
+
+                        input {
+                            width: 200px;
+                            display: none;
                             border: 0;
+                            outline: 0;
+
                         }
                     }
+
+
 
                 }
 
@@ -216,11 +234,17 @@
                     margin-top: 10px;
                     margin-bottom: 20px;
                 }
+                .checkbox{
+                    width: 20px;
+                    height: 20px;
+                    
+                }
 
                 // 同意协议
                 .lable {
                     font-size: 14px;
                     color: #AAAAAA;
+                    vertical-align: top;
 
                     a {
                         font-size: 14px;
@@ -267,27 +291,174 @@
                     }
                 }
 
-                .other {
-                    text-align: center;
-                    height: 96px;                 
-                    font-size: 17px;
-                    color: #AAA;
-                    .other_text{
-                        height: 40px;
-                        line-height: 40px;
-                        margin-bottom: 10px;
+
+            }
+            //注册部分
+            .zc_center {
+                width: 360px;
+                height: 435px;
+                display: none;
+
+          
+
+                // 选国家
+                .country {
+                    width: 360px;
+                    height: 60px;
+                    background-color: pink;
+                    margin-top: 30px;
+
+                    select {
+                        width: 360px;
+                        height: 60px;
                     }
-                   .icon{
-                    display: flex;
-                    justify-content: center;
-                    img{
-                        &:last-child{
-                            margin-right: 0;
-                        }
-                        margin-right: 25px;
-                    }
-                   }
                 }
+
+                //输电话
+                .phone {
+                    width: 360px;
+                    height: 60px;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                    background-color: #fff;
+
+                    .phone_first {
+
+                        width: 140px;
+                        height: 60px;
+                        float: left;
+                        padding: 0 10px;
+                        box-sizing: border-box;
+                        // text-align: center;
+                        font-size: 12px;
+                        color: #838383;
+
+                        div {
+                            height: 30px;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .phone_input {
+                        width: 220px;
+                        height: 60px;
+                        float: left;
+
+                        .txt1 {
+                            width: 220px;
+                            height: 60px;
+                            font-size: 17px;
+                            color: #00000066;
+                            // text-align: center;\
+                            padding: 0 10px;
+                            line-height: 60px;
+                        }
+
+                        input {
+                            width: 220px;
+                            // height: 60px;
+                            outline: none;
+                            border: 0;
+                            display: none;
+
+                        }
+                    }
+
+                }
+
+                //验证码
+                .Verification_Code {
+                    width: 360px;
+                    height: 60px;
+                    margin: 30px 0;
+                    background-color: #fff;
+
+                    .inp {
+                        width: 252px;
+                        height: 60px;
+                        float: left;
+
+                        // 框里面的文字 点击框高度变成一半
+                        .txt_ver {
+                            width: 252px;
+                            height: 60px;
+                            font-size: 17px;
+                            color: #00000066;
+                            // text-align: center;\
+                            padding: 0 10px;
+                            line-height: 60px;
+                        }
+
+                        // 验证码输入框隐藏  点击框显示出来
+                        .ver_num{
+                            width: 252px;
+                            display: none;
+                            border: 0;
+                            outline: 0;
+                        }
+                    }
+
+                    .send {
+                        width: 108px;
+                        height: 60px;
+                        font-size: 14px;
+                        float: left;
+
+                        a {
+                            width: 108px;
+                            height: 60px;
+                            text-align: center;
+                            line-height: 60px;
+                            color: #FF5C00;
+                        }
+                    }
+                }
+
+                // .random{
+                //     width: 100px;
+                //     height: 60px;
+                //     border: 1px solid black;
+                //     position:absolute;
+                //     left: 1220px;
+                //     top: 390px;
+                // }
+
+                // 同意协议
+                .lable {
+                    font-size: 14px;
+                    color: #AAAAAA;
+
+                    a {
+                        font-size: 14px;
+                        color: black;
+
+                    }
+                }
+
+                //下一步按钮
+                .zc_btn {
+                    width: 360px;
+                    height: 60px;
+                    background-color: #ffbd98;
+                    margin: 20px 0 10px;
+                    border-radius: 20px;
+                    font-size: 18px;
+                    color: white;
+                    border: 0;
+                }
+
+                //收不到验证码
+                p {
+                    font-size: 17px;
+
+                    a {
+                        color: #FF5C00;
+                    }
+
+                }
+
+
             }
         }
 
@@ -296,8 +467,35 @@
 
     }
 
+    //其他登录方式
+    .other {
+        text-align: center;
+        height: 96px;
+        font-size: 17px;
+        color: #AAA;
+
+        .other_text {
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+
+            img {
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                margin-right: 25px;
+            }
+        }
+    }
+
     //底部
-    .footer{
+    .footer {
         height: 20px;
         text-align: center;
         line-height: 20px;

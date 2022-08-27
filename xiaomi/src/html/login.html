@@ -20,7 +20,7 @@
         <div class="header">
             <div class="lt">
                 <div class="img"><img src="../img/login_04.png" alt=""></div>
-                <div class="txt">小米账号</div>
+                <div class="txt_xiaomi">小米账号</div>
             </div>
             <div class="rt">
                 <ul class="ul1">
@@ -41,62 +41,137 @@
         <!-- 登录框 -->
         <div class="box">
             <!-- 核心区 -->
+            <div class="top">
+                <div class="dl"><span>登录</span> </div>
+                <div class="zc"><span>注册</span> </div>
+            </div>
             <div class="inner">
-                <!-- 第一部分 -->
-                <div class="top">
-                    <div class="dl"><a href="">登录</a></div>
-                    <div class="zc"><a href="">注册</a></div>
-                </div>
-                <!-- 中间部分 -->
-                <div class="center">
+
+                <!-- 登录html -->
+                <div class="dl_center">
                     <!-- 输入框部分 -->
                     <div class="input">
                         <!-- 下拉菜单部分 -->
                         <div class="select_box">
-                            <select name="department" id="department" >
-                            <option value="0">+86</option>
-                            <option value="1">选项1</option>
-                            <option value="2">选项2</option>
-                            <option value="3">选项3</option>
-                            <option value="4">选项4</option>
-                            <option value="5">选项5</option>
-                            <option value="6">选项6</option>
-                        </select>
-                        <!-- 输入电话部分 -->
-                        <span><input type="text" placeholder="手机号码" class="txt"></span>
+                            <select name="department" id="department">
+                                <option value="0">+86</option>
+                                <option value="1">选项1</option>
+                                <option value="2">选项2</option>
+                                <option value="3">选项3</option>
+                                <option value="4">选项4</option>
+                                <option value="5">选项5</option>
+                                <option value="6">选项6</option>
+                            </select>
+
                         </div>
-                        
+                        <!-- 输入电话部分 -->
+                        <div class="phone_box">
+                            <div class="txt">手机号码</div>
+                            <input type="text" id="phoneNumber" autofocus>
+                        </div>
+
                     </div>
+                    <!-- 正则提示 -->
+                    <p class="rel"></p>
                     <!-- 验证 -->
                     <p>未注册的手机号验证后将自动创建小米帐号</p>
                     <!-- 同意协议 -->
                     <input type="checkbox" name="" id="read" class="checkbox">
-                    <label for="read" class="lable">已阅读并同意小米帐号 <a href="https://static.account.xiaomi.com/html/agreement/user/zh_CN.html">用户协议</a> 和 <a href="https://privacy.mi.com/miaccount/zh_CN/">隐私政策</label>
+                    <label for="read" class="lable">已阅读并同意小米帐号 <a
+                            href="https://static.account.xiaomi.com/html/agreement/user/zh_CN.html">用户协议</a> 和 <a
+                            href="https://privacy.mi.com/miaccount/zh_CN/">隐私政策</label>
                     <!-- 下一步按钮 -->
-                    <input type="button" value="下一步" class="btn">
+                    <input type="button" value="登录" class="btn">
                     <!-- 忘记账号部分 -->
                     <div class="forget">
                         <div class="fgt_id"><a href="">忘记账号?</a></div>
                         <div class="psw_log"><a href="">密码登录</a> </div>
                     </div>
-                    <!-- 其他登录方式 -->
-                    <div class="other">
-                        <div class="other_text">其他登录方式</div>
-                        <div class="icon">
-                            <img src="../img/login_12.png" alt="">
-                            <img src="../img/login_14.png" alt="">
-                            <img src="../img/login_16.png" alt="">
-                            <img src="../img/login_18.png" alt="">
-                        </div>
-                    </div>
+
                 </div>
+
+
+                <!-- 注册html -->
+                <div class="zc_center">
+                    <!-- 国家 -->
+                    <div class="country">
+                        <select name="department" id="department">
+                            <option value="0">中国</option>
+                            <option value="1">中国</option>
+                           
+                        </select>
+                    </div>
+                    <!-- 电话 -->
+                    <div class="phone">
+                        <div class="phone_first">
+                            <div>中国码</div>
+                            <div> +86 </div>
+                        </div>
+                        <div class="phone_input">
+                            <div class="txt1">手机号</div>
+                            <!-- 手机号输入框隐藏  点击框显示出来 -->
+                            <input type="text" class="phoneNum">
+                        </div>
+
+
+                    </div>
+                    <!-- 正则提示 -->
+                    <p class="tishi"></p>
+
+
+                    <!-- 验证码 -->
+                    <div class="Verification_Code">
+                        <div class="inp">
+                            <div class="txt_ver">请输入验证码</div>
+                            <!-- 验证码输入框隐藏  点击框显示出来 -->
+                            <input type="text" class="ver_num">
+                        </div>
+                        <div class="send">
+                            <a href="javascript:;">获取验证码</a>
+                        </div>
+                        <!-- 随机验证码 -->
+                        <!-- <div class="random"></div> -->
+                    </div>
+
+                    <p class="ver_rel"></p>
+                    <!-- 同意协议 -->
+                    <input type="checkbox" name="" id="read1" class="checkbox1">
+                    <label for="read1" class="lable">已阅读并同意小米帐号 <a
+                            href="https://static.account.xiaomi.com/html/agreement/user/zh_CN.html">用户协议</a> 和 <a
+                            href="https://privacy.mi.com/miaccount/zh_CN/">隐私政策</label>
+
+                    <!-- 注册按钮 -->
+                    <input type="button" value="注册" class="zc_btn">
+
+                    <!-- 收不到验证码 -->
+                    <p><a
+                            href="https://account.xiaomi.com/helpcenter/faq/zh_CN/02.faqs/05.sms-and-email-verification-code/faq-1">收不到验证码?</a>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 其他登录方式 -->
+        <div class="other">
+            <div class="other_text">其他登录方式</div>
+            <div class="icon">
+                <img src="../img/login_12.png" alt="">
+                <img src="../img/login_14.png" alt="">
+                <img src="../img/login_16.png" alt="">
+                <img src="../img/login_18.png" alt="">
             </div>
         </div>
         <div class="footer">
             小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号
 
         </div>
+
     </div>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery.cookie.min.js"></script>
+    <script src="../js/login.min.js"></script>
 </body>
 
 </html>

@@ -25,10 +25,10 @@ let {src,dest,watch} = require('gulp'),
     }
     function fnJS(){
         return src('./src/js/**/*.js')
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(concat('login.js'))
+        // .pipe(babel({
+        //     presets: ['@babel/env']
+        // }))
+        // .pipe(concat('login.js'))
         .pipe(uglify())
         .pipe(rename({suffix : '.min'}))
         .pipe(dest('./dist/js'))
